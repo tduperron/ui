@@ -203,7 +203,7 @@ export class TCompForm extends React.Component {
 			onTrigger: this.onTrigger,
 			onChange: this.onChange,
 			onSubmit: this.onSubmit,
-			widgets: { ...this.props.widgets, ...tcompFieldsWidgets },
+			widgets: { ...tcompFieldsWidgets, ...this.props.widgets },
 		};
 
 		return <Form {...props} />;
