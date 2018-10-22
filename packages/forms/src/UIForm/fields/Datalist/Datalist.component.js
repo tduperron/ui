@@ -133,6 +133,7 @@ class Datalist extends Component {
 	}
 
 	render() {
+		//todo réimplémenté datalist widget ici ?
 		const props = omit(this.props, PROPS_TO_OMIT);
 		const descriptionId = generateDescriptionId(this.props.id);
 		const errorId = generateErrorId(this.props.id);
