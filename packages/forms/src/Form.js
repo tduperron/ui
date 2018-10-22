@@ -17,6 +17,7 @@ import TabsWidget from './widgets/TabsWidget';
 import KeyValueWidget from './widgets/KeyValueWidget';
 import MultiSelectTagWidget from './widgets/MultiSelectTagWidget/MultiSelectTagWidget';
 import DatalistWidget from './widgets/DatalistWidget';
+import UIFormDatalistWidget from './UIForm/fields/Datalist';
 import EnumerationWidget from './widgets/EnumerationWidget/EnumerationWidget';
 import CodeWidget from './widgets/CodeWidget';
 import ColumnsWidget from './widgets/ColumnsWidget';
@@ -32,7 +33,9 @@ export const customWidgets = {
 	tabs: TabsWidget,
 	keyValue: KeyValueWidget,
 	multiSelectTag: MultiSelectTagWidget,
-	datalist: DatalistWidget,
+//	datalist: DatalistWidget,
+//	UIFormDatalist: UIFormDatalistWidget,
+	datalist: UIFormDatalistWidget,
 	enumeration: EnumerationWidget,
 	code: CodeWidget,
 	columns: ColumnsWidget,
