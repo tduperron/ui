@@ -95,6 +95,7 @@ const MERGE_FNS = {
 	settingsURL: getUnique,
 	registry: mergeObjects,
 	sagas: mergeObjects,
+	selectors: mergeObjects,
 	components: mergeObjects,
 	expressions: mergeObjects,
 	actionCreators: mergeObjects,

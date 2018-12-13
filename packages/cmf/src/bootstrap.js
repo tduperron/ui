@@ -17,6 +17,7 @@ import storeAPI from './store';
 import registry from './registry';
 import sagaRouter from './sagaRouter';
 import sagas from './sagas';
+import selectors from './selectors';
 import { registerInternals } from './register';
 import cmfModule from './cmfModule';
 
@@ -30,6 +31,7 @@ export function bootstrapRegistry(options) {
 	assertTypeOf(options, 'expressions', 'object');
 	assertTypeOf(options, 'actionCreators', 'object');
 	assertTypeOf(options, 'registry', 'object');
+	assertTypeOf(options, 'selectors', 'object');
 	registerInternals();
 	if (options.registry) {
 		registry.registerMany(options.registry);
@@ -45,6 +47,9 @@ export function bootstrapRegistry(options) {
 	}
 	if (options.sagas) {
 		sagas.registerMany(options.sagas);
+	}
+	if (options.selectors) {
+		selectors.registerMany(options.selectors);
 	}
 }
 
