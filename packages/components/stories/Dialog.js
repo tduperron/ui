@@ -31,8 +31,10 @@ const subtitle = {
 };
 const bigTitle = {
 	show: true,
-	header: 'Hello world (Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.)',
-	subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+	header:
+		'Hello world (Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.)',
+	subtitle:
+		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 	onHide: action('onHide'),
 	action: {
 		label: 'OK',
@@ -94,8 +96,7 @@ const bsProps = {
 	},
 };
 
-const children = (<div>BODY content. You can put what ever you want here</div>);
-
+const children = <div>BODY content. You can put what ever you want here</div>;
 
 storiesOf('Dialog', module)
 	.add('default', () => (

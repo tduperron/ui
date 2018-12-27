@@ -21,7 +21,8 @@ class NotificationWrapper extends React.Component {
 					id: 'story-1',
 					type: 'error',
 					title: 'Story 1 example title',
-					message: 'This is a feedback of your operation1, This is a feedback of your operation1, This is a feedback of your operation1',
+					message:
+						'This is a feedback of your operation1, This is a feedback of your operation1, This is a feedback of your operation1',
 					action: {
 						label: 'Haha',
 						icon: 'talend-undo',
@@ -87,22 +88,19 @@ class NotificationWrapper extends React.Component {
 	}
 }
 
-storiesOf('Notification', module)
-	.add('default', () => (
-		<nav>
-			<h1>Notification</h1>
-			<IconsProvider defaultIcons={icons} />
-			<h2>Definition</h2>
-			<p>
-				The Notification component display notification
-			</p>
-			<ul>
-				<li>Type: info, error, warning</li>
-				<li>Slide in, auto slide out after timeout(except error)</li>
-				<li>Timerbar show remaining time before slide out</li>
-				<li>Hover or click to pin</li>
-			</ul>
-			<h2>Examples</h2>
-			<NotificationWrapper />
-		</nav>
-	));
+storiesOf('Notification', module).add('default', () => (
+	<nav>
+		<h1>Notification</h1>
+		<IconsProvider defaultIcons={icons} />
+		<h2>Definition</h2>
+		<p>The Notification component display notification</p>
+		<ul>
+			<li>Type: info, error, warning</li>
+			<li>Slide in, auto slide out after timeout(except error)</li>
+			<li>Timerbar show remaining time before slide out</li>
+			<li>Hover or click to pin</li>
+		</ul>
+		<h2>Examples</h2>
+		<NotificationWrapper />
+	</nav>
+));

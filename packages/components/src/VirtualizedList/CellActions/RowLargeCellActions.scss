@@ -1,4 +1,5 @@
-// Large display specificities
+@import "~@talend/bootstrap-theme/src/theme/guidelines";
+
 .row {
 	.tc-list-actions :global(.tc-actions) > button {
 		line-height: inherit;

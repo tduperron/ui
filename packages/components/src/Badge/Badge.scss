@@ -1,5 +1,6 @@
-$tc-badge-label-font-size: 13px !default;
-$tc-badge-height: 25px !default;
+@import "~@talend/bootstrap-theme/src/theme/guidelines";
+$tc-badge-label-font-size: 1.3rem !default;
+$tc-badge-height: 2.5rem !default;
 $tc-badge-delete-icon-size: $svg-xs-size !default;
 // it should sum up in 25px height:
 $tc-badge-vertical-padding: ($tc-badge-height - $tc-badge-label-font-size * $line-height-base) / 2 !default;

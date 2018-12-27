@@ -181,9 +181,7 @@ const appStyle = require('./config/themes.scss');
  * @param layoutStoryContent Optional custom children
  */
 function layoutStory(layoutStoryName, layoutStoryProps, layoutStoryContent = content) {
-	stories.add(layoutStoryName, () => (
-		<Layout {...layoutStoryProps}>{layoutStoryContent}</Layout>
-	));
+	stories.add(layoutStoryName, () => <Layout {...layoutStoryProps}>{layoutStoryContent}</Layout>);
 }
 
 /**

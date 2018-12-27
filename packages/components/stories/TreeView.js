@@ -281,7 +281,6 @@ cornerCaseLongName.structure = [
 const style = { width: '300px', border: '1px solid #eee', marginLeft: '10px' };
 
 storiesOf('TreeView', module)
-
 	.add('default', () => (
 		<div>
 			<h1>TreeView</h1>

@@ -1,10 +1,4 @@
-////
-/// Layout
-/// @group Custom widgets
-////
-
-/// Layout first columns in two columns background color
-/// @type Color
+@import "~@talend/bootstrap-theme/src/theme/guidelines";
 $tc-layout-header-height: $navbar-height !default;
 
 .container {

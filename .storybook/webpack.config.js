@@ -1,8 +1,5 @@
-const SASS_DATA = "@import '~@talend/bootstrap-theme/src/theme/guidelines';";
 const autoprefixer = require.main.require('autoprefixer');
-const path = require('path');
-const webpack = require.main.require('webpack');
-const autoPrefixerPlugin = autoprefixer({ browsers: ['last 2 versions'] })
+const autoPrefixerPlugin = autoprefixer({ browsers: ['last 2 versions'] });
 
 module.exports = storybookBaseConfig => {
 	storybookBaseConfig.module.rules.push(
@@ -28,9 +25,6 @@ module.exports = storybookBaseConfig => {
 				},
 				{
 					loader: 'sass-loader',
-					options: {
-						data: SASS_DATA,
-					},
 				},
 			],
 		},
@@ -48,9 +42,6 @@ module.exports = storybookBaseConfig => {
 				},
 				{
 					loader: 'sass-loader',
-					options: {
-						data: SASS_DATA,
-					},
 				},
 			],
 		},
@@ -66,7 +57,7 @@ module.exports = storybookBaseConfig => {
 					},
 				},
 			],
-		}
+		},
 	);
 
 	return storybookBaseConfig;

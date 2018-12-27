@@ -1,10 +1,4 @@
-////
-/// Layout
-/// @group Custom widgets
-////
-
-/// Layout height of the header
-/// @type Number (Unit)
+@import "~@talend/bootstrap-theme/src/theme/guidelines";
 $tc-layout-header-height: $navbar-height;
 $tc-layout-skip-links-z-index: 20;
 $tc-layout-header-z-index: 10;

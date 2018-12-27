@@ -76,7 +76,7 @@ const label4 = {
 const label5 = {
 	tooltipPlacement: 'top',
 	tooltipLabel: 'Webhook job',
-	element: (<div className="custom-element">Custom element can be here</div>),
+	element: <div className="custom-element">Custom element can be here</div>,
 };
 
 const propsPanel = {

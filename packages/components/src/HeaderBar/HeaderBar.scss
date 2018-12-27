@@ -1,4 +1,6 @@
+@import "~@talend/bootstrap-theme/src/theme/guidelines";
 $background-color-on-hover: shade($brand-primary, 30);
+
 @keyframes fadeIn {
 	from {
 		opacity: 0;
