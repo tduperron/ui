@@ -13,7 +13,7 @@ module.exports = storybookBaseConfig => {
 			},
 		},
 		{
-			test: /theme.scss$/,
+			test: /bootstrap.scss$/,
 			use: [
 				'style-loader',
 				'css-loader',
@@ -30,7 +30,7 @@ module.exports = storybookBaseConfig => {
 		},
 		{
 			test: /\.scss$/,
-			exclude: /theme.scss/,
+			exclude: /bootstrap.scss/,
 			use: [
 				'style-loader',
 				'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
