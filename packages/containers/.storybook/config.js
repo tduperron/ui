@@ -8,8 +8,10 @@ import mock from '@talend/react-cmf/lib/mock';
 import api, { actions, sagas } from '@talend/react-cmf';
 import { List, Map } from 'immutable';
 import { call, put } from 'redux-saga/effects';
-import '@talend/bootstrap-theme/src/theme/theme.scss';
+
+import '@talend/bootstrap-theme/src/theme/bootstrap.scss';
 import 'focus-outline-manager';
+
 import ComponentOverlay from './ComponentOverlay';
 import examples from '../examples';
 import {

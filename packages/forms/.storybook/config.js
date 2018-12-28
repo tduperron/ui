@@ -6,7 +6,7 @@ import { checkA11y } from '@storybook/addon-a11y';
 import IconsProvider from '@talend/react-components/lib/IconsProvider';
 import { I18nextProvider } from 'react-i18next';
 
-import '@talend/bootstrap-theme/src/theme/theme.scss';
+import '@talend/bootstrap-theme/src/theme/bootstrap.scss';
 import i18n from '../stories/config/i18n';
 
 function loadStories() {
