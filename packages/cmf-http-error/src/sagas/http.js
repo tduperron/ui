@@ -4,6 +4,8 @@ import { put, takeLatest } from 'redux-saga/effects';
 import { SAGA_FINISHED } from '../constants/sagas';
 import { redirectToStatusCodePage } from '../actions/redirect';
 
+const { UNAUTHORIZED, FORBIDDEN, NOT_FOUND } = HTTP_STATUS;
+
 export function* handleHttpError(event, action) {
 	if (!event.error || !event.error.stack) {
 		return put(SAGA_FINISHED);
@@ -15,11 +17,11 @@ export function* handleHttpError(event, action) {
 	}
 
 	switch (event.error.stack.status) {
-		case HTTP_STATUS.UNAUTHORIZED:
+		case UNAUTHORIZED:
 			// ee only
 			return put(SAGA_FINISHED);
-		case HTTP_STATUS.FORBIDDEN:
-		case HTTP_STATUS.NOT_FOUND:
+		case FORBIDDEN:
+		case NOT_FOUND:
 			return yield put(redirectToStatusCodePage(event.error));
 		default:
 			return yield put(redirectToStatusCodePage(event.error));
