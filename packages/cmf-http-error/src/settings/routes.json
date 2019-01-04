@@ -1,0 +1,23 @@
+{
+  "routes": {
+    "path": "/",
+    "component": "AppLoader",
+    "childRoutes": [
+      {
+        "path": "403",
+        "component": "HttpErrorView",
+        "view": "403"
+      },
+      {
+        "path": "404",
+        "component": "HttpErrorView",
+        "componentId": "404"
+      },
+      {
+        "path": "500",
+        "component": "HttpErrorView",
+        "view": "not-404-403"
+      }
+    ]
+  }
+}
