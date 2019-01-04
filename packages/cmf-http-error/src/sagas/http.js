@@ -1,4 +1,3 @@
-import http from '@talend/react-cmf/lib/sagas/http';
 import { HTTP_STATUS } from '@talend/react-cmf/lib/middlewares/http/constants';
 import get from 'lodash/get';
 import { put, takeLatest } from 'redux-saga/effects';
@@ -30,5 +29,3 @@ export function* handleHttpError(event, action) {
 export function* httpHandler() {
 	yield takeLatest('@@HTTP/ERRORS', handleHttpError);
 }
-
-export default http.create();

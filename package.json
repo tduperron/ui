@@ -54,6 +54,7 @@
   "workspaces": [
     "packages/cmf",
     "packages/cmf-cqrs",
+    "packages/cmf-http-error",
     "packages/cmf-webpack-plugin",
     "packages/components",
     "packages/containers",
