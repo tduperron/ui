@@ -193,12 +193,16 @@ export class UIFormComponent extends React.Component {
 
 	onActionClick(actionOnClick) {
 		if (typeof actionOnClick === 'function') {
-			return (event, data) =>
+			return (event, data) => {
+				if (data.type === 'submit' && this.props.errors) {
+					return;
+				}
 				actionOnClick(event, {
 					...data,
 					formData: this.props.properties,
 					properties: this.props.properties,
 				});
+			};
 		}
 		return () => {};
 	}
