@@ -204,19 +204,22 @@ describe('<Form/>', () => {
 		it('should handles change', done => {
 			// given
 			const input = wrapper.find('input').first();
-
+		
+			jest.resetAllMocks();
 			// when
 			input.simulate('change', { target: { value: 'Test' } });
 
 			// then
+			expect(onChange.mock.calls.length).toEqual(1);
 			expect(
 				wrapper
 					.find('input')
 					.first()
 					.instance().value,
 			).toEqual('Test');
+			
 			wrapper.setState({}, () => {
-				expect(onChange.mock.calls.length).toEqual(1);
+				//expect(onChange.mock.calls.length).toEqual(1);
 				done();
 			});
 		});
@@ -370,6 +373,55 @@ describe('<Form/>', () => {
 
 			// then
 			expect(form).toMatchSnapshot();
+		});
+
+		it('error should be at field level', () => {
+			// given
+			const customData = {
+				jsonSchema: {
+					title: 'Form with live validation',
+					type: 'object',
+					required: ['name', 'email'],
+					properties: {
+						name: {
+							title: 'Name',
+							type: 'string',
+							minLength: 3,
+						},
+						email: {
+							title: 'Email',
+							type: 'string',
+							pattern: '^\\S+@\\S+$',
+							minLength: 5,
+						},
+					},
+				},
+				uiSchema: {
+					email: {
+						'ui:help': 'Please enter a valid email address, e.g. user@email.com',
+					},
+				},
+				properties: {
+				},
+			};
+			const onClickReset = jest.fn();
+			const formActions = [
+				{
+					style: 'primary',
+					type: 'submit',
+					onClick: onSubmit,
+					label: 'Submit',
+				},
+			];
+
+			// when
+			wrapper = mount(
+				<Form liveValidate data={customData} showErrorList={false} onSubmit={onSubmit} />
+			);
+
+			wrapper.simulate('submit');
+			// then
+			expect(wrapper.find('fieldset').find('li')).toHaveLength(2)
 		});
 	});
 });
